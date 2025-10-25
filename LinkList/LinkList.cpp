@@ -27,19 +27,14 @@ void clear(Node *head){
 		free(p);
 	}
 }
-//(无头)链表插入
+//（有头）链表插入
 Node *insert(Node *head,int pos, int val){
-	if(pos == 0){
-		Node *p = GetNewNode(val);
-		p->next = head;
-		return p;
-	}
-	Node *p =head;
-	for(int i = 1;i<pos; i++) p = p->next;
-	Node *node = GetNewNode(val);
+	Node new_head, *p = &new_head,*node = GetNewNode(val);
+	new_head.next = head;
+	for(int i = 0; i<pos;i++) p=p->next;
 	node->next = p->next;
 	p->next = node;
-	return head;
+	return new_head.next;
 }
 //输出操作
 void output_linklist(Node *head,int flag){
