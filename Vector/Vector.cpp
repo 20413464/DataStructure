@@ -24,17 +24,23 @@ void clear(vector_ *v){
     return;
 }
 
+//扩容
+int expand(vector_ *v){
+        if(v == NULL) return 0;
+        printf("expand v from %d to %d\n",v->size,2* v->size);
+        int *p=(int*)realloc(v->data,sizeof(int)*2*v->size);
+        if(p == NULL) return 0;
+        v->data = p;
+        v->size *=2;
+        return 1;
+}
+
 //顺序表的插入
 int insert(vector_ *v,int pos,int val){
     if(pos<0 ||pos>v->count){
-        printf("pos不符合顺序表的大小！");
-        return 0;
+       return 0;
     }
-    if(v->size == v->count) 
-    {	
-	    printf("顺序表已满");
-	    return 0;
-    } 
+    if(v->size == v->count && !expand(v)) return 0;
     for(int i = v->count-1; i >=pos; i--){
     v->data[i+1] = v->data[i];
     }
