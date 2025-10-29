@@ -10,10 +10,10 @@
 ## 已实现的数据结构
 | 数据结构 | 实现文件 | 主要功能 |
 |----------|----------|----------|
-| 顺序表    | ‘Vector/Vector.cpp’  | 创建、插入、查找、删除、销毁顺序表、扩容    |
-| 单链表    | ‘LinkList/LinkList.cpp’ | 创建、插入、查找、删除、销毁链表 |
-| 栈        | ...      |
-| 顺序队列  | Queue/SequentialQueue/SequentialQueue.cpp  | 创建、出队、入队、查找、销毁队列      | | 链表队列  | 待实现	       | ...      |
+| 顺序表    | Vector/Vector.cpp     | 创建、插入、查找、删除、销毁顺序表、扩容    |
+| 单链表    | LinkList/LinkList.cpp | 创建、插入、查找、删除、销毁链表 |
+| 栈        | Stack/Stack.cpp       | 创建、插入、查找、删除、销毁栈|
+| 顺序队列  | Queue/SequentialQueue/SequentialQueue.cpp  | 创建、出队、入队、查找、销毁队列      | | 链表队列  | Queue/LinklistQueue/LinklistQueue.cpp	 | 创建、出队、入队、查找、销毁队列      |
 | 二叉树    | 待实现      | ...      |
 
 ## 环境要求

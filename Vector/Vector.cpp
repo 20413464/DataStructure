@@ -78,7 +78,7 @@ void output_vector(vector_ *v){
 	return ;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
 	srand(time(0));
 	#define MAX_OP 20
 	vector_ *v = getNewVector(MAX_OP);
