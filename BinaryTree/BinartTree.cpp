@@ -57,7 +57,6 @@ void bfs(Node * root){
             printf("\t%d->%d(left)\n",node->key,node->lchild->key);
 
         }
-            printf("\nnode:%d",node->key);
         if(node->rchild){
             queue[tail++] = node->rchild;
             printf("\t%d->%d(right)\n",node->key,node->rchild->key);
